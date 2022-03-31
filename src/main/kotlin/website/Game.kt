@@ -1,3 +1,5 @@
+package website
+
 import kotlinx.html.id
 import react.Props
 import react.RBuilder
@@ -6,6 +8,9 @@ import react.State
 import react.dom.div
 import react.dom.h1
 import react.dom.h2
+import rps.RPS
+import rps.playerButton
+import rps.rpsHand
 
 external fun prompt(msg: String)
 external interface PlayerProps : Props {

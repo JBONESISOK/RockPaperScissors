@@ -1,7 +1,9 @@
+package rps
+
 import kotlinx.css.*
 import styled.StyleSheet
 
-object RPSStyles : StyleSheet("RPSStyles", isStatic = true) {
+object RPSStyles : StyleSheet("rps.RPSStyles", isStatic = true) {
     val img by css {
         width = 100.px
         height = 100.px

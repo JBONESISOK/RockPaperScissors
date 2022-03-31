@@ -1,3 +1,5 @@
+package rps
+
 import kotlinx.html.id
 import react.RBuilder
 import react.dom.div

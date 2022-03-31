@@ -1,3 +1,5 @@
+package rps
+
 import kotlinx.browser.document
 import org.w3c.dom.HTMLImageElement
 
