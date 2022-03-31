@@ -1,6 +1,7 @@
 package website
 
 import kotlinx.html.id
+import rps.playerButton
 import react.Props
 import react.RBuilder
 import react.RComponent
@@ -9,7 +10,6 @@ import react.dom.div
 import react.dom.h1
 import react.dom.h2
 import rps.RPS
-import rps.playerButton
 import rps.rpsHand
 
 external fun prompt(msg: String)

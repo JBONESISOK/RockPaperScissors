@@ -1,5 +1,6 @@
 package rps
 
+import RPSStyles
 import kotlinx.html.id
 import react.RBuilder
 import react.dom.div

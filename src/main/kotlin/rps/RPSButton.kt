@@ -1,5 +1,6 @@
 package rps
 
+import RPSStyles
 import kotlinx.html.js.onClickFunction
 import react.RBuilder
 import styled.css
