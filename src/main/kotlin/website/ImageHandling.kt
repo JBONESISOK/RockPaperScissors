@@ -6,14 +6,14 @@ import rps.RPS
 fun getImage(hand: RPS): String {
     return when (hand) {
         RPS.ROCK -> {
-            "src/main/resources/rock.jpg"
+            "rock.jpg"
         }
         RPS.PAPER -> {
-            "src/main/resources/paper.jpg"
+            "paper.jpg"
         }
 
         RPS.SCISSORS -> {
-            "src/main/resources/scissors.jpg"
+            "scissors.jpg"
         }
     }
 }
