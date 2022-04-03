@@ -4,8 +4,10 @@
     <facet type="kotlin-language" name="Kotlin">
       <configuration version="5" platform="JavaScript " allPlatforms="JS []" useProjectSettings="false" isTestModule="false" externalProjectId="RockPaperScissors">
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
-        <productionOutputPath>$MODULE_DIR$/../../build/js/packages/RockPaperScissors/kotlin/RockPaperScissors.js</productionOutputPath>
-        <compilerSettings />
+        <productionOutputPath>$MODULE_DIR$/../../build/classes/kotlin/main</productionOutputPath>
+        <compilerSettings>
+          <option name="additionalArguments" value="-Xir-module-name=me.origi:RockPaperScissors -Xir-only -Xir-per-module-output-name=RockPaperScissors -Xir-produce-klib-dir" />
+        </compilerSettings>
         <compilerArguments>
           <flagArguments>
             <flagArg name="metaInfo" arg="true" />
@@ -15,7 +17,8 @@
           <stringArguments>
             <stringArg name="main" arg="call" />
             <stringArg name="moduleKind" arg="umd" />
-            <stringArg name="outputFile" arg="$MODULE_DIR$/../../build/js/packages/RockPaperScissors/kotlin/RockPaperScissors.js" />
+            <stringArg name="outputFile" arg="$MODULE_DIR$/../../build/classes/kotlin/main" />
+            <stringArg name="sourceMapEmbedSources" arg="never" />
             <stringArg name="target" arg="v5" />
             <stringArg name="apiVersion" arg="1.6" />
             <stringArg name="languageVersion" arg="1.6" />

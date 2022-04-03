@@ -6,6 +6,7 @@ import react.RBuilder
 import styled.css
 import styled.styledButton
 import styled.styledImg
+import website.getImage
 
 fun RBuilder.playerButton(hand: RPS) {
     styledButton {
