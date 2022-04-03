@@ -1,7 +1,6 @@
 package website
 
 import kotlinx.html.id
-import rps.playerButton
 import react.Props
 import react.RBuilder
 import react.RComponent
@@ -10,7 +9,8 @@ import react.dom.div
 import react.dom.h1
 import react.dom.h2
 import rps.RPS
-import rps.rpsHand
+import rps.components.playerButton
+import rps.components.rpsHand
 
 external fun prompt(msg: String)
 external interface PlayerProps : Props {
@@ -23,6 +23,7 @@ class Game(props: PlayerProps) : RComponent<PlayerProps, PlayerState>(props) {
     init {
         state = PlayerState(props.name)
     }
+
     override fun RBuilder.render() {
         div {
             h1 {

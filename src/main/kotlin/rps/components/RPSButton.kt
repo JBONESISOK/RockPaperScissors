@@ -1,8 +1,11 @@
-package rps
+package rps.components
 
 import RPSStyles
 import kotlinx.html.js.onClickFunction
 import react.RBuilder
+import rps.RPS
+import rps.displayResult
+import rps.playGame
 import styled.css
 import styled.styledButton
 import styled.styledImg

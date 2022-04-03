@@ -1,4 +1,4 @@
-package rps
+package rps.components
 
 import RPSStyles
 import kotlinx.html.id
@@ -17,7 +17,7 @@ fun RBuilder.rpsHand(name: String, id: String) {
             css {
                 +RPSStyles.img
             }
-            attrs.id = id + "_hand"
+            attrs.id = "${id}_hand"
         }
     }
 }
