@@ -5,7 +5,6 @@ import kotlinx.browser.window
 import react.dom.render
 
 fun main() {
-    document.title = "Rock Paper Scissors"
     window.onload = {
         render(document.getElementById("root")) {
             child(Game::class) {
