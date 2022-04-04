@@ -2,7 +2,9 @@ package rps
 
 import kotlinx.browser.document
 import website.changeImages
-
+external interface GameHandler{
+    fun updateStats(result: Boolean?)
+}
 fun displayResult(result: Boolean?) {
     val resultText = document.getElementById("result_text")!!
     when (result) {
@@ -47,3 +49,4 @@ fun playGame(player: RPS): Boolean? {
     }
 
 }
+

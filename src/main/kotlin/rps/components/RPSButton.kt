@@ -3,6 +3,7 @@ package rps.components
 import RPSStyles
 import kotlinx.html.js.onClickFunction
 import react.RBuilder
+import rps.GameHandler
 import rps.RPS
 import rps.displayResult
 import rps.playGame
@@ -10,8 +11,7 @@ import styled.css
 import styled.styledButton
 import styled.styledImg
 import website.getImage
-
-fun RBuilder.playerButton(hand: RPS) {
+fun RBuilder.playerButton(hand: RPS, gameHandler: GameHandler){
     styledButton {
         css {
             +RPSStyles.playerButton
@@ -24,7 +24,9 @@ fun RBuilder.playerButton(hand: RPS) {
             attrs.src = getImage(hand)
         }
         attrs.onClickFunction = {
-            displayResult(playGame(hand))
+            val result = playGame(hand)
+            displayResult(result)
+            gameHandler.updateStats(result)
         }
     }
 }

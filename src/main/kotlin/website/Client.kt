@@ -10,6 +10,9 @@ fun main() {
             child(Game::class) {
                 attrs {
                     name = prompt("What is your name?").toString()
+                    wins = 0
+                    losses = 0
+                    ties = 0
                 }
             }
         }
