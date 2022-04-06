@@ -27,6 +27,15 @@ external interface PlayerProps : Props {
 data class PlayerState(val name: String, val wins: Int, val losses: Int, val ties: Int) : State
 
 class Game(props: PlayerProps) : RComponent<PlayerProps, PlayerState>(props) {
+    private val gameHandler = object : GameHandler {
+        override fun updateStats(result: Boolean?) {
+            when (result) {
+                true -> setState(PlayerState(state.name, state.wins + 1, state.losses, state.ties))
+                false -> setState(PlayerState(state.name, state.wins, state.losses + 1, state.ties))
+                else -> setState(PlayerState(state.name, state.wins, state.losses, state.ties + 1))
+            }
+        }
+    }
     init {
         state = PlayerState(props.name, props.wins, props.losses, props.ties)
     }
@@ -49,15 +58,6 @@ class Game(props: PlayerProps) : RComponent<PlayerProps, PlayerState>(props) {
             rpsHand(state.name, "player")
             div {
                 attrs.id = "player_buttons"
-                val gameHandler = object : GameHandler {
-                    override fun updateStats(result: Boolean?) {
-                        when (result) {
-                            true -> setState(PlayerState(state.name, state.wins + 1, state.losses, state.ties))
-                            false -> setState(PlayerState(state.name, state.wins, state.losses + 1, state.ties))
-                            else -> setState(PlayerState(state.name, state.wins, state.losses, state.ties + 1))
-                        }
-                    }
-                }
                 playerButton(RPS.ROCK, gameHandler)
                 playerButton(RPS.PAPER, gameHandler)
                 playerButton(RPS.SCISSORS, gameHandler)
@@ -65,4 +65,5 @@ class Game(props: PlayerProps) : RComponent<PlayerProps, PlayerState>(props) {
         }
         rpsHand("Computer", "computer")
     }
+
 }
